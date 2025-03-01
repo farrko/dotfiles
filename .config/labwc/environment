@@ -1,0 +1,6 @@
+VISUAL=nvim
+
+XKB_DEFAULT_LAYOUT=br(abnt2)
+
+XCURSOR_THEME=Bibata-Modern-Classic
+XCURSOR_SIZE=20
