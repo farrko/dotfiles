@@ -4,3 +4,6 @@ XKB_DEFAULT_LAYOUT=br(abnt2)
 
 XCURSOR_THEME=Bibata-Modern-Classic
 XCURSOR_SIZE=20
+
+CC=/usr/bin/clang
+CXX=/usr/bin/clang++

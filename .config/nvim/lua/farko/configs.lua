@@ -11,4 +11,6 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+vim.opt.undofile = true
+
 vim.opt.wrap = false

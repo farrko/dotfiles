@@ -31,7 +31,10 @@ return {
       ensure_installed = {
         "ts_ls",
         "lua_ls",
-        "ruff"
+        "ruff",
+        "clangd",
+        "cmake",
+        "rust_analyzer"
       },
       handlers = {
         function(server_name)

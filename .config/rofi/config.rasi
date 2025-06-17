@@ -31,11 +31,11 @@ configuration {
 * {
 	font:                       "Iosevka Nerd Font 10";
 
-	background:                 #0F0F0F;
-	background-alt:             #272727;
+	background:                 #161616;
+	background-alt:             #1B1D1F;  /* #262222; */
 	foreground:                 #D0D0D0;
-	foreground-alt:             #DC143C;
-	active:                     #414868;
+	foreground-alt:             #9EA4AA;  /* #DC143C; */
+	active:                     #BF1744;
 	urgent:                     #F7768E;
 }
 
@@ -43,7 +43,7 @@ window {
 	location:                   center;
 	anchor:                     center;
 	border:                     4px solid;
-	border-color:               @background-alt;
+	border-color:               #26282B;
 	border-radius:              24px;
 
 	width:                      1024px;
@@ -58,20 +58,20 @@ mainbox {
 }
 
 img {
-	margin:                     15px 200px 15px 15px;
+	margin:                     15px 175px 15px 15px;
 	border:                     4px solid;
 	border-color:               @foreground-alt;
 	border-radius:              24px;
   horizontal-align: 0.5;
-	background-image:           url("~/.config/rofi/resources/images/sideimage.jpg", both);
+	background-image:           url("~/.config/rofi/resources/images/sideimage.png", height);
 }
 
 listbox {
-	margin:                     15px 15px 15px -200px;
+	margin:                     15px 15px 15px -175px;
 	padding:                    16px;
 	spacing:                    20px;
 	border:                     0px 0px 0px 4px solid;
-	border-color:               @background-alt;
+	border-color:               @foreground-alt;
 	background-color:           transparent;
 	orientation:                vertical;
 	children:                   [ "inputbar", "message", "listview" ];
