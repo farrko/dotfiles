@@ -1,108 +1,84 @@
 configuration {
-	modi:                       "drun";
+  modi: "drun";
 
-	cycle:                      true;
-	scroll-method:              0;
-	show-icons:                 true;
-	icon-theme:                 "Rowaita";
-	steal-focus:                true;
-	case-sensitive:             false;
-	normalize-match:            true;
-	matching:                   "fuzzy";
-	tokenize:                   true;
-
-	drun-categories:            "";
-	drun-match-fields:          "name,generic,exec,categories,keywords";
-	drun-display-format:        "{name}";
-	drun-show-actions:          false;
-	drun-url-launcher:          "xdg-open";
-	drun-use-desktop-cache:     false;
-	drun-reload-desktop-cache:  false;
-	drun {
-		parse-user:              true;
-		parse-system:            true;
-	}
-
-	disable-history:            false;
-	sorting-method:             "normal";
-	max-history-size:           25;
+	drun-categories: "";
+	drun-match-fields: "name,generic,exec,categories,keywords";
+	drun-display-format: "{name}";
+  show-icons: true;
+	icon-theme: "Rowaita";
 }
 
 * {
-	font:                       "Iosevka Nerd Font 10";
+	font: "Iosevka Nerd Font 10";
 
-	background:                 #161616;
-	background-alt:             #1B1D1F;  /* #262222; */
-	foreground:                 #D0D0D0;
-	foreground-alt:             #9EA4AA;  /* #DC143C; */
-	active:                     #BF1744;
-	urgent:                     #F7768E;
+  background: #161616;
+  background-alt: #262626;
+  foreground: #f2f4f8;
+  foreground-alt: #dde1e6;
 }
 
 window {
-	location:                   center;
-	anchor:                     center;
-	border:                     4px solid;
-	border-color:               #26282B;
-	border-radius:              24px;
+  width: 1024px;
+  height: 576px;
 
-	width:                      1024px;
-	height:                     576px;
+  location: center;
+  anchor: center;
+
+  background-color: transparent;
+  border-color: transparent;
 }
 
 mainbox {
-	orientation:                horizontal;
-	spacing:                    20px;
-	children:                   [ "img", "listbox" ];
-	background-color:           transparent;
+  orientation: horizontal;
+	children: ["img", "listbox"];
+  background-color: @background;
+  border-radius: 20px;
+	spacing: 20px;
 }
 
 img {
-	margin:                     15px 175px 15px 15px;
-	border:                     4px solid;
-	border-color:               @foreground-alt;
-	border-radius:              24px;
-  horizontal-align: 0.5;
-	background-image:           url("~/.config/rofi/resources/images/sideimage.png", height);
+	margin: 0 175px 0 0;
+  border-radius: 20px 0 0 20px;
+	background-image: url("~/.config/rofi/resources/images/GoqjLzlWUAEjIm9.png", height);
 }
 
 listbox {
-	margin:                     15px 15px 15px -175px;
-	padding:                    16px;
-	spacing:                    20px;
-	border:                     0px 0px 0px 4px solid;
-	border-color:               @foreground-alt;
-	background-color:           transparent;
-	orientation:                vertical;
-	children:                   [ "inputbar", "message", "listview" ];
+	margin: 15px 15px 15px -175px;
+	padding: 16px;
+	spacing: 20px;
+	border: 0 0 0 4px solid;
+	border-color: @foreground-alt;
+	background-color: transparent;
+	orientation: vertical;
+	children: [ "inputbar", "message", "listview" ];
 }
 
 listview {
-	columns:                    3;
-	lines:                      5;
-	cycle:                      true;
-	dynamic:                    true;
-	scrollbar:                  false;
-	layout:                     vertical;
-	reverse:                    false;
-	fixed-height:               true;
-	fixed-columns:              true;
+	columns: 3;
+	lines: 5;
+  cycle: true;
+	dynamic: true;
+	scrollbar: false;
+	layout: vertical;
+	reverse: false;
+	fixed-height: true;
+	fixed-columns: true;
 	
-	spacing:                    4px;
-	border:                     0px solid;
-	background-color:           transparent;
+	border: 0px solid;
+	spacing: 4px;
+	background-color: transparent;
 }
 
 inputbar {
-	children:                   [ "textbox-icon", "entry" ];
+	children: [ "textbox-icon", "entry" ];
 
-	border-radius:              24px;
-	background-color:           @background-alt;
-	text-color:                 @foreground;
+	border-radius: 24px;
+	background-color: @background-alt;
+	text-color: @foreground;
 
-	spacing:                    0px;
-	margin:                     0px;
-	padding:                    14px;
+	spacing: 0px;
+	margin: 0px;
+	padding: 14px;
 }
 
 textbox-icon {
@@ -113,48 +89,48 @@ textbox-icon {
 }
 
 entry {
-	cursor:                     text;
-	expand:                     false;
-	placeholder-color:          inherit;
-	placeholder:                "Search";
+	cursor: text;
+	expand: false;
+	placeholder-color: inherit;
+	placeholder: "Search";
 	width: 532px;
-	background-color:           transparent;
-	text-color:                 inherit;
+	background-color: transparent;
+	text-color: inherit;
 }
 
 scrollbar {
-	handle-width:               5px;
-	handle-color:               @foreground-alt;
-	border-radius:              0px;
-	background-color:           @background-alt;
+	handle-width: 5px;
+	handle-color: @foreground-alt;
+	border-radius: 0px;
+	background-color: @background-alt;
 }
 
 element {
-	cursor:                     pointer;
-	background-color:           transparent;
-	border-radius:              10px;
-	padding:                    12px;
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 12px;
 }
 
 element normal.normal {
-	background-color:           @background;
-	text-color:                 @foreground;
+	background-color: @background;
+	text-color: @foreground;
 }
 
 element.alternate.normal {
-	background-color:           @background;
-	text-color:                 @foreground;
+	background-color: @background;
+	text-color: @foreground;
 }
 
 element selected.normal {
-	background-color:           @background-alt;
-	text-color:                 @foreground;
+	background-color: @background-alt;
+	text-color: @foreground;
 }
 
 element-text {
-	background-color:           transparent;
-	text-color:                 inherit;
-	cursor:                     inherit;
-	vertical-align:             0.5;
-	horizontal-align:           0.0;
+	background-color: transparent;
+	text-color: inherit;
+	cursor: inherit;
+	vertical-align: 0.5;
+	horizontal-align: 0.0;
 }
